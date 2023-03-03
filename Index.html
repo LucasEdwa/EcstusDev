@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Web Store</title>
+    <link rel="stylesheet" href="Style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+
+  </head>
+  <body>
+    <header>
+      <h1 class="logo">Bleco Market</h1>
+      <nav>
+        <ul>
+          <li><a href="Home.html">Home</a></li>
+          <li><a href="Index.html">Shop</a></li>
+          <li><a href="Profile.html">Profile</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="Cart.html" class="cart-button">
+            <i class="fas fa-shopping-cart"></i> Cart (
+              <span id="cart-total-items">0</span>)</a></li>
+            </ul>
+      </nav>
+    </header>
+    <main>
+      <h2>Featured Products</h2>
+      <div class="product-list">
+        <div class="Battom product">
+          <img src="battom.jpg" alt="Product 1">
+          <h2>Product 1</h2>
+          <p>Kr 19.99</p>
+          <button class="decrement-quantity-button">-</button>
+          <input type="text" value="1" class="product-quantity">
+          <button class="increment-quantity-button">+</button>
+          <button class="add-to-cart-button" data-name="Product 1" data-price="19.99" data-image="battom.jpg">Add to Cart</button>
+          <div class="notification-container"></div>
+        </div>
+        <div class="Meias product">
+          <img src="meias.jpg" alt="Product 2">
+          <h2>Product 2</h2>
+          <p>Kr 19.99</p>
+          <button class="decrement-quantity-button">-</button>
+          <input type="text" value="1" class="product-quantity">
+          <button class="increment-quantity-button">+</button>
+          <button class="add-to-cart-button" data-name="Product 2" data-price="19.99" data-image="meias.jpg">Add to Cart</button>
+          <div class="notification-container"></div>
+        </div>
+        
+
+      </div>
+      
+    </main>
+    <script src="addtocart.js"></script>
+    <script>
+      function updateCartQuantity() {
+        const cartTotalItemsSpan = document.querySelector('#cart-total-items');
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+        const numItems = cart.reduce((accumulator, product) => accumulator + product.quantity, 0);
+        cartTotalItemsSpan.innerHTML = numItems;
+      }
+      updateCartQuantity();
+    </script>
+    
+  </body>
+</html

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Cart</title>
+    <link rel="stylesheet" href="Style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+
+  </head>
+  <body>
+    <header>
+      <h1 class="logo">Bleco Market</h1>
+      <nav>
+        <ul>
+          <li><a href="Home.html">Home</a></li>
+          <li><a href="Index.html">Shop</a></li>
+          <li><a href="#">Profile</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="Cart.html" class="cart-button">
+            <i class="fas fa-shopping-cart"></i> Cart (
+              <span id="cart-total-items">0</span>)</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="cart-container">
+        <div class="cart-header">
+          <h2>Your Cart</h2>
+          <button id="clear-cart-btn">Clear Cart</button>
+        </div>
+        <ul class="cart-items"></ul>
+        <div class="cart-total">
+          <p>Total:</p>
+          <span>$<span class="cart-total-price">0.00</span></span>
+        </div>
+      </div>
+      <script src="addtocart.js">
+        
+      </script>
+    </main>
+  </body>
+</html>

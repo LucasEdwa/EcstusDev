@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Home Page</title>
+	<link rel="stylesheet" href="Style.css">
+	    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+
+</head>
+<body>
+	<header>
+		<h1 class="logo">Bleco Market</h1>
+		<nav>
+			<ul>
+                <li><a href="Home.html">Home</a></li>
+				<li><a href="Index.html">Shop</a></li>
+				<li><a href="Profile.html">Profile</a></li>
+				<li><a href="#">Contact</a></li>
+				<li><a href="Cart.html" class="cart-button">
+					<i class="fas fa-shopping-cart"></i> Cart (
+					  <span id="cart-total-items">0</span>)</a></li>
+							  </ul>
+		</nav>
+	</header>
+	<main>
+		<h2>Welcome to My Home Page</h2>
+		<p>This is the home page of my website. You can use this page to showcase your latest products, provide information about your business, or simply greet your visitors.</p>
+	</main>
+	<script>
+		function updateCartQuantity() {
+		  const cartTotalItemsSpan = document.querySelector('#cart-total-items');
+		  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+		  const numItems = cart.reduce((accumulator, product) => accumulator + product.quantity, 0);
+		  cartTotalItemsSpan.innerHTML = numItems;
+		}
+		updateCartQuantity();
+	  </script>'
+</body>
+</html>

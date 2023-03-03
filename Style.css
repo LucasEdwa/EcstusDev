@@ -1,0 +1,401 @@
+/* Set the font family and size for the entire page */
+body {
+	font-family: Arial, sans-serif;
+	font-size: 16px;
+}
+
+/* Style the header */
+header {
+	background-color: #aa6d6d;
+	color: #fff;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px;
+}
+
+/* Style the logo */
+.logo {
+	margin: 0;
+	font-size: 24px;
+	font-weight: 700;
+}
+
+/* Style the navigation */
+nav {
+	display: inline-block;
+}
+
+nav ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	display: flex;
+}
+
+nav li {
+	margin-right: 20px;
+}
+
+nav a {
+	color: #fff;
+	text-decoration: none;
+	padding: 10px 20px;
+}
+
+nav a:hover {
+	text-decoration: underline;
+}
+
+/* Style the main content */
+main {
+	margin: 20px;
+}
+
+/* Style the sections */
+section {
+	margin-bottom: 20px;
+}
+
+section h3 {
+	font-size: 18px;
+	font-weight: 600;
+	color: #333;
+	margin-bottom: 10px;
+}
+
+section p {
+	font-size: 16px;
+	font-weight: 400;
+	color: #333;
+	margin: 0;
+}
+
+/* Style the order history list */
+section ul {
+	list-style: none;
+	padding: 0;
+}
+
+section li {
+	font-size: 16px;
+	font-weight: 400;
+	color: #333;
+	margin-bottom: 10px;
+}
+
+/* Style the shopping cart button */
+.cart-button {
+	background-color: #fff;
+	color: #333;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50px;
+	padding: 10px 20px;
+	text-decoration: none;
+	font-weight: bold;
+	transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.cart-button:hover {
+	background-color: #333;
+	color: #fff;
+}
+
+/* Style the add to cart button */
+.add-to-cart {
+	background-color: #17911b;
+	border: none;
+	color: #c57373;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	font-weight: bold;
+	cursor: pointer;
+	margin: 4px 2px;
+}
+
+/* Style the cart container */
+.cart-container {
+	margin: 50px auto;
+	width: 80%;
+	max-width: 1200px;
+}
+
+/* Style the cart header */
+.cart-header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background-color: #f2f2f2;
+	padding: 10px;
+	border-radius: 5px 5px 0 0;
+  }
+  
+  .cart-header h2 {
+	margin: 0;
+	font-size: 24px;
+	font-weight: 700;
+	color: #333;
+  }
+  
+  .cart-items {
+	background-color: #fff;
+	border-radius: 0 0 5px 5px;
+	padding: 20px;
+  }
+  
+  .cart-item {
+	display: flex;
+	align-items: center;
+	margin-bottom: 20px;
+  }
+  
+  .cart-item img {
+	max-width: 100px;
+	margin-right: 20px;
+  }
+  
+  .cart-item h3 {
+	margin: 0;
+	font-size: 18px;
+	font-weight: 600;
+	color: #333;
+  }
+  
+  .cart-item p {
+	margin: 0;
+	font-size: 16px;
+	font-weight: 400;
+	color: #666;
+  }
+  
+  .cart-item span {
+	margin-left: auto;
+	font-size: 18px;
+	font-weight: 600;
+	color: #333;
+  }
+  
+  .cart-total {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	margin-top: 20px;
+  }
+  
+  .cart-total p {
+	margin: 0 10px 0 0;
+	font-size: 18px;
+	font-weight: 600;
+	color: #333;
+  }
+  
+  .cart-total span {
+	font-size: 24px;
+	font-weight: 700;
+	color: #f44336;
+  }
+  .decrement-quantity-button,
+.increment-quantity-button {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid #333;
+  background-color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.product-quantity {
+  width: 40px;
+  height: 30px;
+  border: 1px solid #333;
+  text-align: center;
+  margin-right: 10px;
+}
+.notification-container {
+	position: fixed;
+	top: 20px;
+	right: 20px;
+	z-index: 999;
+  }
+  
+  .notification {
+	padding: 10px;
+	background-color: #3cb371;
+	color: #fff;
+	font-size: 16px;
+	font-weight: bold;
+	border-radius: 5px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+	transition: opacity 0.5s ease-in-out;
+	}
+	
+	.notification.show {
+	opacity: 1;
+	}
+	
+	.notification.hide {
+	opacity: 0;
+	pointer-events: none;
+	}
+	
+	/* Style the profile section */
+	.profile-container {
+	margin: 50px auto;
+	width: 80%;
+	max-width: 1200px;
+	background-color: #f2f2f2;
+	padding: 20px;
+	border-radius: 5px;
+	text-align: center;
+	}
+	
+	/* Style the profile header */
+	.profile-header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 20px;
+	}
+	
+	/* Style the profile header h2 */
+	.profile-header h2 {
+	margin: 0;
+	font-size: 24px;
+	font-weight: 700;
+	color: #333;
+	}
+	
+	/* Style the profile information section */
+	.profile-info {
+	margin-bottom: 20px;
+	}
+	
+	/* Style the profile information p elements */
+	.profile-info p {
+	margin: 0;
+	font-size: 18px;
+	font-weight: 600;
+	color: #333;
+	}
+	
+	/* Style the edit profile button */
+	.profile-edit-button {
+	background-color: #aa6d6d;
+	border: none;
+	color: #fff;
+	padding: 10px 20px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	font-weight: bold;
+	cursor: pointer;
+	margin-left: 20px;
+	border-radius: 5px;
+	transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+	}
+	
+	/* Style the profile edit button on hover */
+	.profile-edit-button:hover {
+	background-color: #fff;
+	color: #aa6d6d;
+	}
+	
+	/* Style the order history header */
+	.profile-orders-header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 20px;
+	}
+	
+	/* Style the order history header h3 */
+	.profile-orders-header h3 {
+	margin: 0;
+	font-size: 18px;
+	font-weight: 600;
+	color: #333;
+	}
+	
+	/* Style the order history section */
+	.profile-orders h4 {
+		margin: 0;
+		font-size: 16px;
+		font-weight: 600;
+		color: #333;
+		}
+		
+		.profile-orders p {
+		margin: 0;
+		font-size: 14px;
+		font-weight: 400;
+		color: #666;
+		}
+		
+		.profile-addresses-header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom: 20px;
+		}
+		
+		.profile-addresses-header h3 {
+		margin: 0;
+		font-size: 18px;
+		font-weight: 600;
+		color: #333;
+		}
+		
+		.profile-addresses {
+		background-color: #fff;
+		padding: 20px;
+		border-radius: 5px;
+		}
+		
+		.profile-address {
+		margin-bottom: 20px;
+		}
+		
+		.profile-address h4 {
+		margin: 0;
+		font-size: 16px;
+		font-weight: 600;
+		color: #333;
+		}
+		
+		.profile-address p {
+		margin: 0;
+		font-size: 14px;
+		font-weight: 400;
+		color: #666;
+		}
+		
+		.profile-address-edit-button {
+		background-color: #aa6d6d;
+		border: none;
+		color: #fff;
+		padding: 10px 20px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 14px;
+		font-weight: bold;
+		cursor: pointer;
+		margin-left: 20px;
+		border-radius: 5px;
+		transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+		}
+		
+		.profile-address-edit-button:hover {
+		background-color: #fff;
+		color: #aa6d6d;
+		}

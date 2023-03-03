@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Profile Page</title>
+	<link rel="stylesheet" href="Style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+</head>
+<body>
+	<header>
+		<h1 class="logo">Bleco Market</h1>
+		<nav>
+			<ul>
+				<li><a href="Home.html">Home</a></li>
+				<li><a href="Index.html">Shop</a></li>
+				<li><a href="Profile.html">Profile</a></li>
+				<li><a href="#">Contact</a></li>
+				<li><a href="Cart.html" class="cart-button">
+					<i class="fas fa-shopping-cart"></i> Cart (
+					  <span id="cart-total-items">0</span>)</a></li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<h2>My Profile</h2>
+		<section>
+			<h3>Personal Information</h3>
+			<p>Name: John Doe</p>
+			<p>Email: johndoe@example.com</p>
+			<p>Phone: (123) 456-7890</p>
+		</section>
+		<section>
+			<h3>Order History</h3>
+			<ul>
+				<li>Order #1</li>
+				<li>Order #2</li>
+				<li>Order #3</li>
+			</ul>
+		</section>
+		<section>
+			<h3>Address Book</h3>
+			<ul>
+				<li>Address 1</li>
+				<li>Address 2</li>
+				<li>Address 3</li>
+			</ul>
+		</section>
+	</main>
+	<script>
+		function updateCartQuantity() {
+		  const cartTotalItemsSpan = document.querySelector('#cart-total-items');
+		  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+		  const numItems = cart.reduce((accumulator, product) => accumulator + product.quantity, 0);
+		  cartTotalItemsSpan.innerHTML = numItems;}
+          updateCartQuantity();
+	  </script>
+</body>
+</html>
